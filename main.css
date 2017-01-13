@@ -1,0 +1,21 @@
+body {
+  background-color: BurlyWood ;
+}
+
+.panel {
+  background-color: SkyBlue ;
+}
+
+.form-control {
+  background-color: NavajoWhite  ;
+}
+
+.btn-default {
+  background-color: LightSeaGreen;
+  border: none;
+}
+
+.btn-warning {
+  background-color: SteelBlue ;
+  border: none;
+}

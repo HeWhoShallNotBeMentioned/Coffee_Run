@@ -29,3 +29,5 @@
   App.Truck = Truck;
   window.App = App;
 })(window);
+
+//browser-sync start --server --files "stylesheets/*.css, scripts/*.js, *.html"

@@ -9,7 +9,7 @@
   window.myTruck = myTruck;
   var formHandler = new FormHandler(FORM_SELECTOR);
 
-  formHandler.addSubmitHandler();
+  formHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));
   console.log(formHandler);
 
 })(window);

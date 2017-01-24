@@ -15,6 +15,11 @@
     }
   }
 
+  CheckList.prototype.addRow = function (coffeeOrder) {
+    var rowElement = new Row(coffeeOrder);
+    this.$element.append(rowElement.$element);
+  };
+
   function Row(coffeeOrder) {
     var $div = $('<div></div>', {'data-coffee-order': 'checkbox','class': 'checkbox'});
     var $label = $('<label></label>');
@@ -31,7 +36,7 @@
     $label.append(description);
     $div.append('label');
 
-    $this.element = $div;    
+    $this.element = $div;
   }
 
   App.CheckList = CheckList;

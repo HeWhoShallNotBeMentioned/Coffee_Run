@@ -16,7 +16,7 @@
   }
 
   function Row(coffeeOrder) {
-    
+    var $div = $('<div></div>', {'data-coffee-order': 'checkbox','class': 'checkbox'});
   }
 
   App.CheckList = CheckList;

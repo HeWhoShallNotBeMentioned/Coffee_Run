@@ -11,6 +11,7 @@
 
     this.$element = $(selector);
     if (this.$element.length === 0) {
+      console.log(selector);
       throw new Error('Could not find element with selector: ' + selector);
     }
   }
@@ -28,15 +29,15 @@
     if (coffeeOrder.flavor){
       description += coffeeOrder.flavor + ' ';
     }
-    description += coffeeOrder.coffee + ' ';
+    description += coffeeOrder.coffee + ', ';
     description += ' (' + coffeeOrder.emailAddress + ') ';
     description += ' [' + coffeeOrder.strength + 'x]';
 
     $label.append($checkbox);
     $label.append(description);
-    $div.append('label');
+    $div.append($label);
 
-    $this.element = $div;
+    this.$element = $div;
   }
 
   App.CheckList = CheckList;

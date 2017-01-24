@@ -7,6 +7,7 @@
   var DataStore = App.DataStore;
   var FormHandler = App.FormHandler;
   var CheckList = App.CheckList;
+  checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
   var myTruck = new Truck('ncc-1701', new DataStore());
   var checkList = new CheckList(CHECKLIST_SELECTOR);
   window.myTruck = myTruck;

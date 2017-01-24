@@ -19,6 +19,13 @@
     var $div = $('<div></div>', {'data-coffee-order': 'checkbox','class': 'checkbox'});
     var $label = $('<label></label>');
     var $checkbox = $('<input></input>', {type: 'checkbox', value: coffeeOrder.emailAddress});
+    var description = coffeeOrder.size + ' ';
+    if (coffeeOrder.flavor){
+      description += coffeeOrder.flavor + ' ';
+    }
+    description += coffeeOrder.coffee + ' ';
+    description += ' (' + coffeeOrder.emailAddress + ') ';
+    description += ' [' + coffeeOrder.strength + 'x]';    
   }
 
   App.CheckList = CheckList;

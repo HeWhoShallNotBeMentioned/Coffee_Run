@@ -8,6 +8,7 @@
   var FormHandler = App.FormHandler;
   var Validation = App.Validation;
   var CheckList = App.CheckList;
+  var webshim = window.webshim;
   var myTruck = new Truck('ncc-1701', new DataStore());
   var checkList = new CheckList(CHECKLIST_SELECTOR);
   checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
@@ -20,6 +21,9 @@
   });
 
   formHandler.addInputHandler(Validation.isCompanyEmail);
+
+  webshim.polyfill('forms forms-ext');
+  webshim.setOptions('forms', { addValidators: true, lazyCustomMessages: true});
 
 })(window);
 
